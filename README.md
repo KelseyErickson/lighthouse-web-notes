@@ -6,4 +6,6 @@ This repository contains all of the notes taken by [Kelsey Erickson](https://git
 
 
 
-
+## Table of Contents
+* [Week 1](/Week_1)
+  * [Day1](/Week_1/Day_1)
