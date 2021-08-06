@@ -9,3 +9,7 @@ This repository contains all of the notes taken by [Kelsey Erickson](https://git
 ## Table of Contents
 * [Week 1](/Week_1)
   * [Day1](/Week_1/Day_1)
+  * [Lectures](/Week_1/Lectures)
+    * [Lecture 1 (Dev Work Flow)](/Week_1/Lectures/Lecture1)
+* [Code Explainations](/Code_Explainations)
+  * [Filter](/Code_Explainations/notes_on_filter)
