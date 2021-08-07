@@ -68,4 +68,13 @@ class SomeClass {
 - you can call methods on the instances but not on the class itself since it is just a blueprints
 
 ## Constructor
-constructor – a special kind of methos that gets exectured when an object instance in sreated from a class. Eveything inside the constructor methos will get run for the new isntance of the class. Helps set up default state for new instances. It is for setting default values. 
+- constructor – a special kind of method that gets exected when an object instance is created from a class. 
+
+- Eveything inside the constructor method will get run for the new instance of the class. Helps set up default state(makes default values) for new instances. 
+- the objects we create with classes are just objects but we create them with defaults
+
+## Primitives as Objects
+- every primitive (not symbol) has a corresponding object constructor. 
+- object construtors can be invoked with the keyword 'new'.
+- an object primitive will == a non object primitive but will not ===
+- it is generally bad practice to use object constructors to create primitives. 
