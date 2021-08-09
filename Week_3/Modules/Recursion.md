@@ -31,3 +31,88 @@ function countEvenToTwelve(number) {
 ```
 
 - Being able to identify when the problem you are solving is just a smaller instance of the problem you have already solved will allow you to determine when to use recursion instead of iteration.
+
+
+Additional example from mentor using objects
+
+``` Javascript
+const groups = {
+
+  groupOne: {
+    members: ['Adam', 'Andy', 'Sam', 'Andrea'],
+    groups: {
+      subGroupOne: {
+        members: ['Adam', 'Andrea']
+      },
+      subGroupTwo: {
+        members: ['Andy', 'Sam'],
+
+        groups: {
+          subGroupOne: {
+            members: ['Adam', 'Andrea'],
+
+            groups: {
+              subGroupOne: {
+                members: ['Adam', 'Andrea']
+              },
+              subGroupTwo: {
+                members: ['Andy', 'Sam'],
+                groups: {
+                  subGroupOne: {
+                    members: ['Adam', 'Andrea']
+                  },
+                  subGroupTwo: {
+                    members: ['Andy', 'Sam']
+                  }
+                }
+              }
+            }
+          },
+          subGroupTwo: {
+            members: ['Andy', 'Sam']
+          }
+        }
+      }
+    }
+  },
+
+  groupTwo: {
+    members: ['Adam', 'Joe', 'Sam', 'Andrea'],
+    groups: {
+      subGroupThree: {
+        members: ['Adam', 'Andrea']
+      },
+      subGroupFour: {
+        members: ['Joe', 'Sam']
+      }
+    }
+  }
+}
+
+const numberOfNamesInGroups = (memberName, groups) => { // to find the number of times the name appears in members
+  let count = 0;
+  for (const mainGroupKey in groups) {
+    const group = groups[mainGroupKey]; // here we are accessing the keys in groupOne and groupTwo
+    for (const member of group.members) { // for every array of members we find we loop through and check if the names match
+      if (member === memberName) {
+        count++; // if they do we will add to the count. 
+      }
+    }
+
+    if(group.groups){ // for every group(remember this is groupOne and groupTwo from above) .groups - so everytime you run into a groups key under the other groups
+      count += numberOfNamesInGroups('Adam', group.groups); // we call the function again to go through all of this again until the count is done and there are no more nested objects. 
+
+      // the stopping condition is if we have another nested object, if we don't the counter just updates it all and we are done. 
+    }
+  
+  }
+
+
+  return count;
+}
+
+
+
+console.log(numberOfNamesInGroups('Adam', groups)); 
+
+```
