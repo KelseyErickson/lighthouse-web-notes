@@ -16,5 +16,8 @@ This repository contains all of the notes taken by [Kelsey Erickson](https://git
 * [Week 3](/Week_3/) (TDD (Mocha, Chai) and Intro to OOP)
   * [Lectures](/Week_3/Lectures)
   * [Modules](/Week_3/Modules)
+* [Week 4](/Week_4) (Asynchronous Work Flow)
+  * [Lectures](/Week_4/Lectures)
+  * [Modules](/Week_4/Modules)
 * [Code Explainations](/Code_Explainations)
   
